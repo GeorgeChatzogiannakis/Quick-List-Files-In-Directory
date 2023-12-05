@@ -1,4 +1,4 @@
-# Quick-List-Files-In-Directory
+# Quick_List_Files_In_Directory
 This little python script generates a text file containing every file and folder name in a given directory
 
 This python script is a quick way to list all the files and folders in a user specified directory. 
