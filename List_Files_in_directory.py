@@ -42,7 +42,9 @@ def browse_button():
     global selected_directory
     selected_directory = filedialog.askdirectory()
     if selected_directory:
-        directory_label.config(text=f"Selected Directory: {selected_directory}")
+        directory_name = os.path.basename(selected_directory)
+        directory_label.config(text=f"Selected Directory: ")
+        directory_value_label.config(text=f"{directory_name}")
         run_button.config(state=tk.NORMAL)
     else:
         directory_label.config(text="Selected Directory: ")
@@ -66,8 +68,12 @@ directory_prompt.pack()
 browse_button = tk.Button(root, text="Browse", command=browse_button)
 browse_button.pack(pady=10)
 
-directory_label = tk.Label(root, text="Selected Directory: ")
+directory_label = tk.Label(root, text="Selected Directory:")
 directory_label.pack()
+
+directory_value_label = tk.Label(root, text="")
+directory_value_label.pack()
+
 
 run_button = tk.Button(root, text="Run", command=run_button_clicked, state=tk.DISABLED)
 run_button.pack(pady=10)
