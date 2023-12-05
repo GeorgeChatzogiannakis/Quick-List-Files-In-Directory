@@ -60,7 +60,7 @@ def run_button_clicked():
 # Create main window
 root = tk.Tk()
 root.title("Directory Content Lister")
-root.geometry("350x160")
+root.geometry("350x170")
 
 # Create and place widgets
 directory_prompt = tk.Label(root, text="Please Select a Directory:")
